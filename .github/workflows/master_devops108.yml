@@ -4,6 +4,9 @@
 name: Build and deploy ASP.Net Core app to Azure Web App - devops108
 
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
@@ -50,5 +53,5 @@ jobs:
         with:
           app-name: 'devops108'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8EA7705A897848DA9192F57E1EFEBD7D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C948C6245D6844AFAC671A8FDB1D9886 }}
           package: .
